@@ -14,18 +14,11 @@
           type="text"
           pInputText
           placeholder="Search users"
-          (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+          [(ngModel)]="searchTerm"
         />
       </span>
     </div>
-
     <div class="btn-filters">
-
-<!--      <p-select [options]="filter"-->
-<!--                optionLabel="label"-->
-<!--                placeholder="Filter"-->
-<!--                [style]="{ width: '10rem' }"-->
-<!--              />-->
       <p-button
         label="Export"
         icon="pi pi-download"
@@ -36,48 +29,11 @@
   </div>
 
     <div class="table_users__content" >
-
-      <p-table
-
-        #dt
-        [value]="vm.users"
-        [globalFilterFields]="['name','email']"
-        class="users-table"
-        [tableStyle]="{ 'min-width': '50rem' }"
-        dataKey="id"
-      >
-
-        <ng-template pTemplate="header">
-          <tr>
-            <th *ngFor="let col of vm.headers">{{ col.name }}</th>
-            <th>Avatar</th>
-            <th>Actions</th>
-          </tr>
-        </ng-template>
-
-        <ng-template pTemplate="body" let-row>
-          <tr>
-
-            <!-- Dynamic columns -->
-            <td *ngFor="let col of vm.headers">
-              {{ row[col.prop] }}
-            </td>
-            <!-- Avatar column -->
-            <td>
-              <div class="avatar">
-                {{ Helper.getInitials(row.name) }}
-              </div>
-            </td>
-
-            <!-- Actions -->
-            <td class="actions">
-              <i (click)="null" class="pi pi-trash"></i>
-              <i class="pi pi-pencil"></i>
-            </td>
-
-          </tr>
-        </ng-template>
-      </p-table>
+      <app-table-users
+        [filterText]="searchTerm"
+        [users]="vm.users"
+        [header]="vm.headers"
+      ></app-table-users>
     </div>
 </div>
 

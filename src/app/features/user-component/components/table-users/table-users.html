@@ -1,0 +1,41 @@
+<p-table
+
+  #dt
+  [value]="users"
+  [globalFilterFields]="['name','email']"
+  class="users-table"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  dataKey="id"
+>
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of header">{{ col.name }}</th>
+      <th>Avatar</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-row>
+    <tr>
+
+      <!-- Dynamic columns -->
+      <td *ngFor="let col of header">
+        {{ row[col.prop] }}
+      </td>
+      <!-- Avatar column -->
+      <td>
+        <div class="avatar">
+          {{ Helper.getInitials(row.name) }}
+        </div>
+      </td>
+
+      <!-- Actions -->
+      <td class="actions">
+        <i (click)="null" class="pi pi-trash"></i>
+        <i class="pi pi-pencil"></i>
+      </td>
+
+    </tr>
+  </ng-template>
+</p-table>

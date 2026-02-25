@@ -23,30 +23,24 @@ It demonstrates the use of feature-based architecture, services, components, gua
 ```bash
 Public/                  # Imágenes, iconos y otros recursos
 src/
-├── main.ts              # Punto de entrada de Angular
-├── index.html           # HTML principal
-├── styles.scss          # Estilos globales
 ├── app/
-│   ├── core/            # Configuraciones y servicios globales
-│   │   ├── constants/   # Constantes de la app
-│   │   ├── guards/      # Guards
-│   │   ├── interceptors/# Interceptores HTTP
-│   │   ├── models/      # Modelos globales
-│   │   └── services/    # Servicios globales
-│   │
-│   ├── features/        # Módulos o features específicos
-│   │   └── user-component/ # archivos base html, scss, componente ts y rutas
-│   │       ├── components/ # Componentes de esta feature
-│   │       ├── models/     # Modelos de la feature
-│   │       ├── services/   # Servicios de la feature
-│   │       ├── state/      # State management / facades
-│   │
-│   ├── layout/          # Layout general de la app
-│   │
-│   ├── shared/          # Componentes y utilidades compartidas
-│   └── util/            # Helpers y utilidades (ej. app.config.ts, helper.ts)
-│
-└── environments/        # Configuración de entornos (environment.ts, environment.prod.ts)
+│   ├── core/        # Configuraciones y servicios globales
+│   ├── features/    # User Feature con tabla, búsqueda y state management
+│   │   └── user-component/
+│   │       ├── components/
+│   │       ├── models/
+│   │       ├── services/
+│   │       ├── state/        # Facade
+│   │       ├── user-component.ts
+│   │       ├── user-component.html
+│   │       ├── user-component.scss
+│   │       └── user-component.routes.ts
+│   ├── layout/      # Layout general de la app
+│   ├── shared/      # Componentes y utilidades compartidas
+│   └── util/        # Helpers y utilidades
+├── environments/    # Configuración de entornos
+├── assets/          # Recursos estáticos
+└── docs/            # Capturas de pantalla y GIFs
   ```
 
 ## Getting Started

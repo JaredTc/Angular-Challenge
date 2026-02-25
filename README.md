@@ -1,7 +1,7 @@
 # Angular Challenge
 
-This is an Angular technical challenge consuming the JSONPlaceholder public API.  
-It demonstrates the use of feature-based architecture, services, components, guards, and interceptors.
+Este es un desafío de Angular consumiendo la API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
+Muestra el uso de **componentes, servicios, state management, Lazy Loading y RxJS**.
 
 ## Features
 - **Tabla de usuarios:** Muestra los usuarios obtenidos de la API.
@@ -38,9 +38,7 @@ src/
 │   ├── layout/      # Layout general de la app
 │   ├── shared/      # Componentes y utilidades compartidas
 │   └── util/        # Helpers y utilidades
-├── environments/    # Configuración de entornos
-├── assets/          # Recursos estáticos
-└── docs/            # Capturas de pantalla y GIFs
+└── environments/    # Configuración de entornos
   ```
 
 ## Getting Started

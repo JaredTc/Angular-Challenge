@@ -1,0 +1,83 @@
+
+<div class="info-title">
+  <div>
+    <h2>User Management</h2>
+    <span>Manage your team member and their account permisions here</span>
+  </div>
+</div>
+<div class="table_users" *ngIf="facade.vm$ | async as vm">
+  <div class="filter">
+    <div class="search">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          placeholder="Search users"
+          (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+        />
+      </span>
+    </div>
+
+    <div class="btn-filters">
+
+<!--      <p-select [options]="filter"-->
+<!--                optionLabel="label"-->
+<!--                placeholder="Filter"-->
+<!--                [style]="{ width: '10rem' }"-->
+<!--              />-->
+      <p-button
+        label="Export"
+        icon="pi pi-download"
+        (click)="null"
+      ></p-button>
+    </div>
+
+  </div>
+
+    <div class="table_users__content" >
+
+      <p-table
+
+        #dt
+        [value]="vm.users"
+        [globalFilterFields]="['name','email']"
+        class="users-table"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        dataKey="id"
+      >
+
+        <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let col of vm.headers">{{ col.name }}</th>
+            <th>Avatar</th>
+            <th>Actions</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-row>
+          <tr>
+
+            <!-- Dynamic columns -->
+            <td *ngFor="let col of vm.headers">
+              {{ row[col.prop] }}
+            </td>
+            <!-- Avatar column -->
+            <td>
+              <div class="avatar">
+                {{ Helper.getInitials(row.name) }}
+              </div>
+            </td>
+
+            <!-- Actions -->
+            <td class="actions">
+              <i (click)="null" class="pi pi-trash"></i>
+              <i class="pi pi-pencil"></i>
+            </td>
+
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+</div>
+

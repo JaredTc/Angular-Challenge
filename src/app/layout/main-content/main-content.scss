@@ -1,0 +1,11 @@
+.page-body-wrapper-mine {
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 0 40px; /* Espaciado lateral */
+  margin: 0 auto; /* Centra si es necesario */
+  background: rgba(229, 252, 242, 0.2);
+  //height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

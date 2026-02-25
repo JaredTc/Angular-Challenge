@@ -35,7 +35,7 @@ src/
 │   │   └── services/    # Servicios globales
 │   │
 │   ├── features/        # Módulos o features específicos
-│   │   └── user-component/ # archivos base html.scss, componente ts y rutas
+│   │   └── user-component/ # archivos base html, scss, componente ts y rutas
 │   │       ├── components/ # Componentes de esta feature
 │   │       ├── models/     # Modelos de la feature
 │   │       ├── services/   # Servicios de la feature

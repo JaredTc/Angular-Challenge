@@ -16,6 +16,43 @@ It demonstrates the use of feature-based architecture, services, components, gua
 - TypeScript
 - JSONPlaceholder API
   
+# 📂 Estructura del proyecto
+
+```bash
+Public/                  # Imágenes, iconos y otros recursos
+src/
+├── main.ts              # Punto de entrada de Angular
+├── index.html           # HTML principal
+├── styles.scss          # Estilos globales
+├── app/
+│   ├── core/            # Configuraciones y servicios globales
+│   │   ├── constants/   # Constantes de la app
+│   │   ├── guards/      # Guards
+│   │   ├── interceptors/# Interceptores HTTP
+│   │   ├── models/      # Modelos globales
+│   │   └── services/    # Servicios globales
+│   │
+│   ├── features/        # Módulos o features específicos
+│   │   └── user-component/
+│   │       ├── components/ # Componentes de esta feature
+│   │       ├── models/     # Modelos de la feature
+│   │       ├── services/   # Servicios de la feature
+│   │       ├── state/      # State management / facades
+│   │       ├── user-component.ts
+│   │       ├── user-component.html
+│   │       ├── user-component.scss
+│   │       └── user-component.routes.ts
+│   │
+│   ├── layout/          # Layout general de la app
+│   │   ├── main-content.ts
+│   │   ├── main-content.html
+│   │   └── main-content.scss
+│   │
+│   ├── shared/          # Componentes y utilidades compartidas
+│   └── util/            # Helpers y utilidades (ej. app.config.ts, helper.ts)
+│
+└── environments/        # Configuración de entornos (environment.ts, environment.prod.ts)
+  ```
 
 ## Getting Started
 git clone

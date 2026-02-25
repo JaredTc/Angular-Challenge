@@ -9,13 +9,17 @@ It demonstrates the use of feature-based architecture, services, components, gua
 - Shared utilities and helper functions
 - Modular layout (`main-content`)
 
+## 💻 Capturas de pantalla
+<img src="public/screenshots/view-users.png" alt="Pantalla principal" width="200"/> 
 ## Technologies
 - Angular
 - TypeScript
 - JSONPlaceholder API
+  
 
 ## Getting Started
 git clone
   ```bash
   https://github.com/JaredTc/Angular-Challenge.git
   ```
+

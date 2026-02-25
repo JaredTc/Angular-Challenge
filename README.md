@@ -15,3 +15,7 @@ It demonstrates the use of feature-based architecture, services, components, gua
 - JSONPlaceholder API
 
 ## Getting Started
+git clone
+  ```bash
+  https://github.com/JaredTc/Angular-Challenge.git
+  ```

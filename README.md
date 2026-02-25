@@ -7,8 +7,8 @@ It demonstrates the use of feature-based architecture, services, components, gua
 - **Tabla de usuarios:** Muestra los usuarios obtenidos de la API.
 - **Funcionalidad de búsqueda:** Filtra usuarios dinámicamente.
 - **State management:** `user.facade.ts` gestiona el flujo de datos entre el servicio y la UI.
-- **Lazy loading**: Routing
-- **Rxjs**: Observables
+- **Lazy Loading:** La feature se carga de manera diferida mediante routing.
+- **RxJS:** Uso de Observables para manejar datos de manera reactiva.
 
 ## 💻 Screens Shots
 <img src="public/screenshots/view-users.png" alt="Pantalla principal" width="800"/> 
@@ -53,5 +53,13 @@ src/
 git clone
   ```bash
   https://github.com/JaredTc/Angular-Challenge.git
+  ```
+Instalar dependencias:
+  ```bash
+npm install
+  ```
+Ejecutar el proyecto:
+  ```bash
+ng serve
   ```
 

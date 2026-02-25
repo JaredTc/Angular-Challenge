@@ -10,7 +10,7 @@ It demonstrates the use of feature-based architecture, services, components, gua
 - Modular layout (`main-content`)
 
 ## 💻 Capturas de pantalla
-<img src="public/screenshots/view-users.png" alt="Pantalla principal" width="200"/> 
+<img src="public/screenshots/view-users.png" alt="Pantalla principal" width="600"/> 
 ## Technologies
 - Angular
 - TypeScript
